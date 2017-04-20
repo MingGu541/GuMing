@@ -12,16 +12,15 @@ export class Home1 {
   member:Array<any>
   constructor(public navCtrl: NavController, public navParams: NavParams,public actionSheetCtrl:ActionSheetController) {
      this.member = [
-      {id:1,name:"shennan",tel:110},
-      {id:5,name:"guoqiang",tel:112},
-      {id:2,name:"shihai",tel:119},
-      {id:3,name:"jisheng",tel:112},
-      {id:4,name:"jinpo",tel:129}];
-
+      {id:1,name:"冰峪沟",tel:110},
+      {id:5,name:"樱花园",tel:112},
+      {id:2,name:"星海公园",tel:119},
+      {id:3,name:"大黑石",tel:112},
+      {id:4,name:"付家庄",tel:129}];
   }
    presentActionSheet() {
     let actionSheet = this.actionSheetCtrl.create({
-      title: '选项',
+      title: '景区排序',
       buttons: [
         {
           text: '升序',
@@ -47,7 +46,9 @@ export class Home1 {
     });
     actionSheet.present();
   }
+  itemClick() {
 
+  }
   ionViewDidLoad() {
     console.log('ionViewDidLoad Home1');
   }

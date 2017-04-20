@@ -12,10 +12,28 @@
 
 </ion-header>
 <ion-content padding>
-<ion-item  *ngFor="let user of member">
- <br>
- 编号:{{user.id}} <b>姓名：{{user.name}} </b>
- <br>电话：{{user.tel}}
-</ion-item>
+  <ion-list>
+    <ion-item width="50px" height="50px"  *ngFor="let user of member" (click)=itemClick()>
+      <ion-avatar item-left class="" *ngIf="user.id==1" >
+        <img width="50px" height="50px" src="../../assets/icon/img/bingyugou.jpg" > 
+      </ion-avatar> 
+       <ion-avatar item-left *ngIf="user.id==2">
+        <img width="50px" height="50px"  src="../../assets/icon/img/xinghai.jpg">
+      </ion-avatar>  
+      <ion-avatar item-left *ngIf="user.id==3">
+        <img width="50px" height="50px"  src="../../assets/icon/img/daheishi.jpg">
+      </ion-avatar> 
+       <ion-avatar item-left *ngIf="user.id==4">
+        <img width="50px" height="50px"  src="../../assets/icon/img/fujiazhuang.jpg">
+      </ion-avatar>  
+      <ion-avatar item-left *ngIf="user.id==5">
+        <img width="50px" height="50px"  src="../../assets/icon/img/yinghuayuan.jpg">
+      </ion-avatar> 
+      <br>
+      <H2><b>景区编号:{{user.id}}</b></H2> <h3><b>景区名称:{{user.name}}</b></h3>
+      <h3>景区电话：{{user.tel}} </h3> 
+    </ion-item>
+  </ion-list>
+
   <button ion-button full color="secondary" (click)=presentActionSheet()>排序</button> 
 </ion-content>
