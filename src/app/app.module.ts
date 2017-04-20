@@ -8,7 +8,6 @@ import { ContactPage } from '../pages/contact/contact';
 import { Home } from '../pages/home/home';
 import { Home1 } from '../pages/home1/home1';
 import { TabsPage } from '../pages/tabs/tabs';
-import { MemberList } from '../pages/member-list/member-list';
 
 
 import { StatusBar } from '@ionic-native/status-bar';
@@ -21,7 +20,6 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     ContactPage,
     Home,
     Home1,
-    MemberList,
     TabsPage
   ],
   imports: [

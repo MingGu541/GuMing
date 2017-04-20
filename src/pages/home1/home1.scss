@@ -1,3 +1,9 @@
 page-home1 {
+    .item-md ion-avatar ion-img, .item-md ion-avatar img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    overflow: hidden;
+}
 
 }

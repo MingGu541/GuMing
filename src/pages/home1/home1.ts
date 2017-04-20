@@ -48,6 +48,7 @@ export class Home1 {
   }
   itemClick() {
 
+            console.log('itemClick');
   }
   ionViewDidLoad() {
     console.log('ionViewDidLoad Home1');

@@ -7,31 +7,49 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>home1</ion-title>    
+    <ion-title>景区列表</ion-title>    
   </ion-navbar>
 
 </ion-header>
 <ion-content padding>
   <ion-list>
-    <ion-item width="50px" height="50px"  *ngFor="let user of member" (click)=itemClick()>
-      <ion-avatar item-left class="" *ngIf="user.id==1" >
-        <img width="50px" height="50px" src="../../assets/icon/img/bingyugou.jpg" > 
+    <ion-item  *ngFor="let user of member" (click)=itemClick()>
+     <!-- <ion-avatar width="50px" height="50px" item-left *ngIf="user.id==1" >
+        <img  src="../../assets/icon/img/bingyugou.jpg" > 
       </ion-avatar> 
        <ion-avatar item-left *ngIf="user.id==2">
-        <img width="50px" height="50px"  src="../../assets/icon/img/xinghai.jpg">
+        <img src="../../assets/icon/img/xinghai.jpg">
       </ion-avatar>  
       <ion-avatar item-left *ngIf="user.id==3">
-        <img width="50px" height="50px"  src="../../assets/icon/img/daheishi.jpg">
+        <img src="../../assets/icon/img/daheishi.jpg">
       </ion-avatar> 
        <ion-avatar item-left *ngIf="user.id==4">
-        <img width="50px" height="50px"  src="../../assets/icon/img/fujiazhuang.jpg">
+        <img src="../../assets/icon/img/fujiazhuang.jpg">
       </ion-avatar>  
       <ion-avatar item-left *ngIf="user.id==5">
-        <img width="50px" height="50px"  src="../../assets/icon/img/yinghuayuan.jpg">
-      </ion-avatar> 
-      <br>
+        <img src="../../assets/icon/img/yinghuayuan.jpg">
+      </ion-avatar> -->
+
+<ion-card>
+    <img *ngIf="user.id==1" src="../../assets/icon/img/bingyugou.jpg" > 
+    <img *ngIf="user.id==2" src="../../assets/icon/img/xinghai.jpg">
+    <img *ngIf="user.id==3" src="../../assets/icon/img/daheishi.jpg">
+    <img *ngIf="user.id==4" src="../../assets/icon/img/fujiazhuang.jpg">
+    <img *ngIf="user.id==5" src="../../assets/icon/img/yinghuayuan.jpg">
+  <ion-card-content>
+    <ion-card-title>
+    {{user.name}}
+      </ion-card-title>
+    <p>
+      景区编号:{{user.id}}<br>
+      景区电话：{{user.tel}} 
+    </p>
+  </ion-card-content>
+</ion-card>
+
+      <!--<br>
       <H2><b>景区编号:{{user.id}}</b></H2> <h3><b>景区名称:{{user.name}}</b></h3>
-      <h3>景区电话：{{user.tel}} </h3> 
+      <h3>景区电话：{{user.tel}} </h3> -->
     </ion-item>
   </ion-list>
 
