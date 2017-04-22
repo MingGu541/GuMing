@@ -6,12 +6,13 @@ import { MyApp } from './app.component';
 import { AboutPage } from '../pages/about/about';
 import { ContactPage } from '../pages/contact/contact';
 import { Home } from '../pages/home/home';
-import { Home1 } from '../pages/home1/home1';
 import { TabsPage } from '../pages/tabs/tabs';
+// import { LocList } from '../pages/LocList/LocList';
 
-
+import { HttpModule } from '@angular/http';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { LocListModule } from '../pages/LocList/LocListModule';
 
 @NgModule({
   declarations: [
@@ -19,11 +20,11 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     AboutPage,
     ContactPage,
     Home,
-    Home1,
-    TabsPage
+    TabsPage//,
+    //LocList
   ],
   imports: [
-    BrowserModule,
+    BrowserModule,LocListModule,HttpModule,
     IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],
@@ -32,7 +33,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     AboutPage,
     ContactPage,
     Home,
-    Home1,
+    //LocList,
     TabsPage
   ],
   providers: [

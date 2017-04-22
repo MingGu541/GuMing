@@ -1,0 +1,44 @@
+<!--
+  Generated template for the Home1 page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>景区列表</ion-title>    
+    <ion-buttons end>
+        <!--<ion-nav-back-button start></ion-nav-back-button>-->
+        <button ion-button  (click)="presentPopover($event)">
+          <ion-icon name="more"></ion-icon> 
+        </button>
+        
+    </ion-buttons>
+    </ion-navbar>
+  
+</ion-header>
+<ion-content padding>
+  <ion-list>
+    <ion-item  *ngFor="let sc of scenic" (click)=itemClick(sc)>
+   <ion-card>
+    <img src="{{sc.Image?sc.Image:'assets/icon/img/404.jpg'}}"> 
+  <ion-card-content>
+    <ion-card-title>
+    {{sc.name}}
+    </ion-card-title>
+    <p>
+      景区编号:{{sc.ID}}<br>
+      景区电话：{{sc.Tel}} 
+    </p>
+  </ion-card-content>
+</ion-card>
+
+      <!--<br>
+      <H2><b>景区编号:{{user.id}}</b></H2> <h3><b>景区名称:{{user.name}}</b></h3>
+      <h3>景区电话：{{user.tel}} </h3> -->
+    </ion-item>
+  </ion-list>
+
+  <button ion-button full color="secondary" (click)=presentActionSheet()>排序</button> 
+</ion-content>
